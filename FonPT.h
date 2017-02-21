@@ -6,7 +6,8 @@
  * Copyright (c) 2017 Paulo Bruckmann. All rights reserved.
  *
  * This library uses Fon credentials to perform authorization on FON routers
- * distributed by NOS ISP in Portugal. (doesn't work with NOS accounts).
+ * related to NOS ISP in Portugal using ESP8266 Arduino Library.
+ * (Doesn't work with NOS accounts).
  * All product names brands are property of their respective owners.
  *
  * This library is free software; you can redistribute it and/or
@@ -51,10 +52,7 @@
 
 class FonPT {
   public:
-    // fon router internal ip
-    String getIntIP();
-    // internet ip
-    String getExtIP();
+    
     // perform authorization and returns status
     // auth(<FON_USER>,<FON_PASS>) or auth(<FON_USER>,<FON_PASS>,<FON_SSID>)
     // default SSID is FON_ZON_FREE_INTERNET
