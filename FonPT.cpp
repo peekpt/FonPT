@@ -27,6 +27,12 @@
 
 #include "FonPT.h"
 
+void FonPT::disconnect(){
+  DBGF_FON("DISCONNECTED");
+  httpClient.end();
+  WiFi.disconnect(1);
+}
+
 bool FonPT::auth(String fonUser, String fonPass, String fonSSID) {
 
         DBGF_FON("\n\nFON AUTH\n");

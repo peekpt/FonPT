@@ -52,12 +52,14 @@
 
 class FonPT {
   public:
-    
+
     // perform authorization and returns status
     // auth(<FON_USER>,<FON_PASS>) or auth(<FON_USER>,<FON_PASS>,<FON_SSID>)
     // default SSID is FON_ZON_FREE_INTERNET
     bool auth(String fonUser, String fonPass, String fonSSID = defaultFonSSID);
-
+    void disconnect();
+    String getIntIP();
+    String getExtIP();
   private:
     HTTPClient httpClient;
     String extIP;
